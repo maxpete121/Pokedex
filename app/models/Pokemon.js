@@ -30,22 +30,28 @@ export class Pokemon{
 
     get pokemonActiveTemplate(){
         return`
-        <div class="w-25 bg-white card">
-        <img src='${this.img}'>
-        <div class="d-flex">
-        <span class="me-2">Name:</span>
-        <span>${this.name}</span>
+        <div class="w-50 bg-white card text-center">
+        <img class="img-fluid" src='${this.img}'>
+        <div class="d-flex text-center">
+        <span class="me-2 fw-bold">Name:</span>
+        <span class="text-uppercase">${this.name}</span>
         </div>
         <div class="d-flex">
-        <span class="me-2">Abilities:</span>
+        <span class="me-2 fw-bold">Abilities:</span>
         <div>
-        <span>${this.abilities[0].ability.name},</span>
-        <span>${this.abilities[1].ability.name}</span>
+        <span class="text-capitalize">${this.abilities[0].ability.name},</span>
+        <span class="text-capitalize">${this.abilities[1].ability.name}</span>
         </div>
         </div>
-        <div></div>
+        <div class="d-flex">
+        <span class="me-2 fw-bold">Move Preview:</span>
+        <div>
+        <span class="text-capitalize">${this.moves[0].move.name},</span>
+        <span class="text-capitalize">${this.moves[1].move.name}</span>
+        </div>
+        </div>
         <span>
-        <button>Add To Pokedex</button>
+        <button onclick="app.SandboxController.savePokemon('${this.id}')">Add To Pokedex</button>
         </span>
         </div>
         `
