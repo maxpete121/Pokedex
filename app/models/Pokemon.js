@@ -10,8 +10,14 @@ export class Pokemon{
         this.id = data.id
         this.abilities = data.abilities
         this.types = data.types
+        this.moves = data.moves
     }
 
+    pokemonAbilities(){
+        return `
+        
+        `
+    }
     static pokemonListTemplate(pokemon){
         return`
         <div class="d-flex mt-2 bg-light rounded-2 p-2">
@@ -26,8 +32,17 @@ export class Pokemon{
         return`
         <div class="w-25 bg-white card">
         <img src='${this.img}'>
-        <div>${this.name}</div>
-        <div>${this.abilities}</div>
+        <div class="d-flex">
+        <span class="me-2">Name:</span>
+        <span>${this.name}</span>
+        </div>
+        <div class="d-flex">
+        <span class="me-2">Abilities:</span>
+        <div>
+        <span>${this.abilities[0].ability.name},</span>
+        <span>${this.abilities[1].ability.name}</span>
+        </div>
+        </div>
         <div></div>
         <span>
         <button>Add To Pokedex</button>
