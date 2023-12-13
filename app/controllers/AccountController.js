@@ -1,13 +1,12 @@
 import { AppState } from "../AppState.js";
 import { setHTML } from "../utils/Writer.js";
+import { sandboxService } from "../services/SandboxService.js";
 
-// function _drawAccount() {
-//   if (!AppState.account) { return }
-//   setHTML('account-welcome', AppState.account.AccountCardTemplate)
-// }
+
 
 export class AccountController {
   constructor() {
+    
     // AppState.on('account', _drawAccount)
     // _drawAccount()
   }

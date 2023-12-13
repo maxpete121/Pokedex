@@ -56,4 +56,12 @@ export class Pokemon{
         </div>
         `
     }
+
+    get pokemonTemp(){
+        return`
+        <div class="col-2 bg-dark text-light">
+        <span>${this.name}</span>
+        </div>
+        `
+    }
 }

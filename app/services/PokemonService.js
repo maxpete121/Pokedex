@@ -21,7 +21,7 @@ class PokemonService{
         console.log('active Test', response)
         let newPokemon = new Pokemon(response.data)
         AppState.activePokemon = newPokemon
-        console.log(AppState.activePokemon)
+        console.log('active',AppState.activePokemon)
     }
 }
 
