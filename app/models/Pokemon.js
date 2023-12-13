@@ -8,4 +8,10 @@ export class Pokemon{
         this.weight = data.weight
         this.height = data.height
     }
+
+    static pokemonListTemplate(){
+        return`
+        <div>${this.name}</div>
+        `
+    }
 }
